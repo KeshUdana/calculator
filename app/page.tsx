@@ -1,5 +1,5 @@
 "use client"; // This line specifies that this component is a client component
-
+import './globals.css';
 import React, { useState } from 'react';
 
 const Calculator: React.FC = () => {
@@ -54,33 +54,31 @@ const Calculator: React.FC = () => {
     };
 
     return (
-        <div>
-            <h1>Hello User, let's do some math</h1>
+        <div className="flex items-center justify-center min-h-screen ">
+        <div className='flex flex-col justify-center items-center w-3/5 p-6 rounded-lg bg-lime-500 z-40'>
 
-            <div className="display">
-                <input type="text" value={display} placeholder="0" readOnly />
+            <div className="display w-1/2 border-4 border-indigo-900 rounded-lg mb-8">
+                <input className="text-4xl" type="text" value={display} placeholder="0" readOnly />
             </div>
 
-            <div className="numpad">
+            <div className="numpad grid grid-cols-3 gap-2 w-40 mx-auto">
                 {Array.from({ length: 10 }, (_, number) => (
-                    <button key={number} onClick={() => appendToDisplay(number.toString())}>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    key={number} onClick={() => appendToDisplay(number.toString())}>
                         {number}
+                        
                     </button>
                 ))}
+                <button className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('+')}>+</button>
+                <button className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('-')}>-</button>
+                <button className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('/')}>/</button>
+                <button className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('*')}>*</button>
+                <button className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={calculate}>=</button>
+                <button className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={clearDisplay}>C</button>
             </div>
-
-            <div className="op">
-                <p>Choose an operation</p>
-                <button onClick={() => handleSetOperation('+')}>+</button>
-                <button onClick={() => handleSetOperation('-')}>-</button>
-                <button onClick={() => handleSetOperation('/')}>/</button>
-                <button onClick={() => handleSetOperation('*')}>*</button>
-            </div>
-
-            <br />
-            <button onClick={calculate}>=</button>
-            <button onClick={clearDisplay}>C</button>
-            <h2>Result = <span>{result}</span></h2>
+            <h2 className='text-4xl text-semibold text-sky-900'>Answer : <span>{result} </span></h2>
+            
+        </div>
         </div>
     );
 };
