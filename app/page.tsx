@@ -54,13 +54,19 @@ const Calculator: React.FC = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen ">
-        <div className='flex flex-col  container justify-center items-center w-3/5 p-6 rounded-lg bg-stone-400 z-40'>
-
-            <div className="display w-1/4 border-4 border-orange-500 rounded-lg mb-8">
-                <input className="text-4xl" type="text" value={display} placeholder="0" readOnly />
+       <div className="flex items-center justify-center min-h-screen bg-gray-100">
+          <div className="flex flex-col justify-center items-center w-3/5 p-6 rounded-lg bg-stone-400 z-40">
+            <div className="flex justify-center w-full mb-8">
+              <div className="w-1/2 border-4 border-orange-500 rounded-lg">
+                <input
+                  className="text-4xl w-full p-2"
+                  type="text"
+                  value={display}
+                  placeholder="0"
+                  readOnly
+                />
+              </div>
             </div>
-
             <div className="numpad grid grid-cols-3 gap-2 w-40 mx-auto">
                 {Array.from({ length: 10 }, (_, number) => (
                     <button className="bg-stone-700 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
