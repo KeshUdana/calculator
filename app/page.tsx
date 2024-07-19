@@ -69,12 +69,12 @@ const Calculator: React.FC = () => {
                         
                     </button>
                 ))}
-                <button className='bg-purple-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('+')}>+</button>
-                <button className='bg-purple-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('-')}>-</button>
-                <button className='bg-purple-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('/')}>/</button>
-                <button className='bg-purple-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('*')}>*</button>
-                <button className='bg-purple-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={calculate}>=</button>
-                <button className='bg-purple-500 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={clearDisplay}>C</button>
+                <button className='bg-orange-500 hover:bg-orange-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('+')}>+</button>
+                <button className='bg-orange-500 hover:bg-orange-800  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('-')}>-</button>
+                <button className='bg-orange-500 hover:bg-orange-800  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('/')}>/</button>
+                <button className='bg-orange-500 hover:bg-orange-800  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={() => handleSetOperation('*')}>*</button>
+                <button className='bg-orange-500 hover:bg-orange-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={calculate}>=</button>
+                <button className='bg-orange-500 hover:bg-orange-800  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' onClick={clearDisplay}>C</button>
             </div>
             <h2 className='text-4xl text-semibold text-sky-900'>Answer : <span>{result} </span></h2>
             
