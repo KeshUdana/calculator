@@ -1,6 +1,4 @@
-Here's a **README.md** file for your calculator app:
 
-```markdown
 # React TypeScript Calculator App
 
 This is a simple and responsive calculator app built using React and TypeScript. It features a user-friendly interface and supports basic arithmetic operations, including addition, subtraction, multiplication, and division.
